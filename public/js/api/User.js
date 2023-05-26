@@ -8,16 +8,18 @@ class User {
    * Устанавливает текущего пользователя в
    * локальном хранилище.
    * */
+
+  static URL = "/user";
+
   static setCurrent(user) {
-
+    localStorage.setItem("user", JSON.stringify(user));
   }
-
   /**
    * Удаляет информацию об авторизованном
    * пользователе из локального хранилища.
    * */
   static unsetCurrent() {
-
+    localStorage.removeItem('user');
   }
 
   /**
@@ -25,17 +27,30 @@ class User {
    * из локального хранилища
    * */
   static current() {
-
+   if (localStorage.getItem("user")) {
+    return JSON.parse(localStorage.getItem("user"));
+    } else {
+    return undefined;
+    }
   }
 
   /**
    * Получает информацию о текущем
    * авторизованном пользователе.
    * */
-  static fetch(callback) {
-
+  static fetch (callback){
+    createRequest({
+      url: this.URL + '/current',
+      method: 'GET',
+      callback: (err, response) => {
+        if (response.success === false){
+          return response
+        } else {
+          this.setCurrent(response.user);
+        }
+      }
+    })
   }
-
   /**
    * Производит попытку авторизации.
    * После успешной авторизации необходимо
@@ -55,6 +70,7 @@ class User {
         callback(err, response);
       }
     });
+
   }
 
   /**
@@ -64,14 +80,35 @@ class User {
    * User.setCurrent.
    * */
   static register(data, callback) {
-
+    
+    createRequest({
+      url: this.URL + '/register',
+      method: 'POST',
+      data,
+      callback: (err, response) => {
+        if (response.success === true) {
+          this.setCurrent(response.user);
+          
+        }
+        callback(err, response);
+      }
+    });
+    
   }
-
   /**
    * Производит выход из приложения. После успешного
    * выхода необходимо вызвать метод User.unsetCurrent
    * */
   static logout(callback) {
-
+    createRequest({
+      url: this.URL + '/logout',
+      method: 'POST',
+      callback: (err, response) => {
+        if (response.success === true) {
+          this.unsetCurrent();
+        }
+        callback(err, response);
+      }
+    });
   }
 }

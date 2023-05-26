@@ -1,3 +1,5 @@
+// const { response } = require("express");
+
 /**
  * Класс Entity - базовый для взаимодействия с сервером.
  * Имеет свойство URL, равно пустой строке.
@@ -8,17 +10,32 @@ class Entity {
    * Это могут быть счета или доходы/расходы
    * (в зависимости от того, что наследуется от Entity)
    * */
-  static list(data, callback){
+ static URL = '';  
 
+  static list(data, callback) {
+    createRequest({
+      url: this.URL,
+      data,
+      method: 'GET',
+      callback: ( err, response ) => {
+        callback(err, response);
+      }
+    });
   }
-
   /**
    * Создаёт счёт или доход/расход с помощью запроса
    * на сервер. (в зависимости от того,
    * что наследуется от Entity)
    * */
   static create(data, callback) {
-
+    createRequest({
+      url: this.URL,
+      data,
+      method: 'PUT',
+      callback: (err, response) => {
+        callback(err, response);
+      }
+    });
   }
 
   /**
@@ -26,6 +43,15 @@ class Entity {
    * (в зависимости от того, что наследуется от Entity)
    * */
   static remove(data, callback ) {
-
+    createRequest({
+      url: this.URL,
+      data: {
+        id:data
+      },
+      method: 'DELETE',
+      callback: (err, response) => {
+        callback(err, response);
+      }
+    });
   }
 }

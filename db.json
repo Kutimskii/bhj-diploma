@@ -1,0 +1,294 @@
+{
+  "users": [
+    {
+      "name": "demo",
+      "email": "demo@demo",
+      "password": "demo",
+      "id": "1"
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": "pv1yn1tolht6z00k"
+    },
+    {
+      "name": "Rer",
+      "email": "EDSG@tset",
+      "password": "234234234",
+      "id": "pv1yng28lht8gbp9"
+    },
+    {
+      "name": "Куьт",
+      "email": "tot@toto",
+      "password": "12345",
+      "id": "pv1yn6jolht8wsx8"
+    },
+    {
+      "name": "qwer",
+      "email": "wer@sdfs",
+      "password": "12345",
+      "id": "pv1yn1q8lht8zqtf"
+    },
+    {
+      "name": "qwe",
+      "email": "aa@aad",
+      "password": "12345",
+      "id": "pv1ynffwlht93ze1"
+    },
+    {
+      "id": "pv1yndiwlht99ktq"
+    },
+    {
+      "name": "йцу",
+      "email": "qwe@test",
+      "password": "1233",
+      "id": "pv1ync0olhtgem0n"
+    },
+    {
+      "name": "q",
+      "email": "qwqw@wer",
+      "password": "wq",
+      "id": "pv1yngfglhtgsoj4"
+    },
+    {
+      "name": "qwe",
+      "email": "as@w",
+      "password": "$%",
+      "id": "pv1yn6yglhtguuib"
+    },
+    {
+      "name": "qwe",
+      "email": "qw@qw",
+      "password": "123",
+      "id": "pv1ynhfklhtgzn5q"
+    },
+    {
+      "name": "1311",
+      "email": "qeqe@qe",
+      "password": "123",
+      "id": "pv1ync8slhtht2j0"
+    },
+    {
+      "name": "123",
+      "email": "123@awe",
+      "password": "qweq",
+      "id": "pv1yn9p8lhthut9h"
+    },
+    {
+      "name": "123",
+      "email": "123@1",
+      "password": "ase",
+      "id": "pv1yn350lhut356l"
+    },
+    {
+      "name": "qwe",
+      "email": "qwe@sdf",
+      "password": "qwe",
+      "id": "pv1yndh0lhuu7wm1"
+    },
+    {
+      "name": "123123",
+      "email": "1231@123",
+      "password": "qwe",
+      "id": "pv1ynh2clhuunv20"
+    },
+    {
+      "name": "Коля ",
+      "email": "kolya@123",
+      "password": "123",
+      "id": "pv1yn6m0lhuuovn2"
+    },
+    {
+      "name": "123",
+      "email": "123@12",
+      "password": "123",
+      "id": "pv1yn7tclhvzjhei"
+    },
+    {
+      "name": "123",
+      "email": "123@12342",
+      "password": "qweqew",
+      "id": "pv1ynge4lhw08ms1"
+    },
+    {
+      "name": "Костя",
+      "email": "kostya@123",
+      "password": "123",
+      "id": "pv1yncskli4abxws"
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Банк",
+      "user_id": "1",
+      "id": "1"
+    },
+    {
+      "name": "Магазин",
+      "user_id": "1",
+      "id": "2"
+    },
+    {
+      "name": "Бизнес",
+      "user_id": "1",
+      "id": "3"
+    },
+    {
+      "name": "qweqwe",
+      "user_id": "pv1yn6m0lhuuovn2",
+      "id": "pv1yni7gli4ab380"
+    },
+    {
+      "name": "qqq",
+      "user_id": "pv1yncskli4abxws",
+      "id": "pv1yn9usli4ac2tk"
+    }
+  ],
+  "transactions": [
+    {
+      "account_id": "1",
+      "created_at": "2019-09-15 10:24:02",
+      "id": "1",
+      "name": "Кредит",
+      "sum": 5000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "1",
+      "created_at": "2019-09-17 15:53:02",
+      "id": "2",
+      "name": "Баланс на дебетовке",
+      "sum": 3200,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "1",
+      "created_at": "2019-09-19 20:12:02",
+      "id": "3",
+      "name": "Копилка",
+      "sum": 1500,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-26 16:23:02",
+      "id": "4",
+      "name": "Молочные продукты",
+      "sum": 100,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-25 15:03:02",
+      "id": "5",
+      "name": "Фрукты",
+      "sum": 250,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-25 15:03:02",
+      "id": "17",
+      "name": "Овощи",
+      "sum": 300,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-26 14:47:02",
+      "id": "6",
+      "name": "Мясо",
+      "sum": 600,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-27 13:27:02",
+      "id": "7",
+      "name": "Долг в банк",
+      "sum": 5000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-10-15 13:27:02",
+      "id": "9",
+      "name": "На банду",
+      "sum": 15000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-09-17 13:27:02",
+      "id": "10",
+      "name": "На стволы",
+      "sum": 6000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-12-27 13:27:02",
+      "id": "11",
+      "name": "Прибыль с банка",
+      "sum": 1500000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2018-01-15 13:27:02",
+      "id": "12",
+      "name": "Прибыль с магазина",
+      "sum": 300000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2018-01-15 13:27:02",
+      "id": "13",
+      "name": "Подарок сизого",
+      "sum": 20000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-09-15 13:27:02",
+      "id": "14",
+      "name": "На охрану",
+      "sum": 60000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-10-15 13:27:02",
+      "id": "15",
+      "name": "На бумер",
+      "sum": 300000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "id": "pv1ynf1sli4ab6yl",
+      "type": "income",
+      "name": "qweqw",
+      "sum": 13123,
+      "account_id": "pv1yni7gli4ab380",
+      "user_id": "pv1yn6m0lhuuovn2",
+      "created_at": "2023-05-26T08:11:51.164Z"
+    }
+  ]
+}

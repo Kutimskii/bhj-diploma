@@ -15,12 +15,12 @@ class AccountsWidget {
    * необходимо выкинуть ошибку.
    * */
   constructor( element ) {
-      if(element) {
+      if(!element) {
+        throw new Error('Ошибка');
+      } else {
         this.element = element;
         this.registerEvents();
         this.update();
-      } else {
-        alert('Ошибка');
       }
   }
 

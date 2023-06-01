@@ -18,21 +18,17 @@ class CreateTransactionForm extends AsyncForm {
    * */
   renderAccountsList() {
     Account.list(User.current(),(err, response)=> {
-      if (response.success === true) {
-        [...document.querySelectorAll('.accounts-select')].forEach ((el)=> {
-          el.innerHTML = '';
-          for(let elem of response.data) {
-            el.insertAdjacentHTML('afterbegin',`<option value="${elem.id}">${elem.name}</option>`);
-          }
-        }) 
-        
-        //   response.data.forEach((el) => {
-        //   document.querySelector('#expense-accounts-list').
-        //   insertAdjacentHTML('afterbegin',`<option value="${el.id}">${el.name}</option>`);
-        // });
-       
+      if (response.success === true){
+        this.element.querySelector("select").innerHTML = '';
+        this.element.querySelector("select").insertAdjacentHTML('afterbegin',
+        response.data.reduce((sum, elem) => {
+          return sum += `<option value="${elem.id}">${elem.name}</option>`
+        },''));
       }
     })
+
+            // this.element.querySelector("#income-accounts-list").
+            // insertAdjacentHTML('afterbegin',`<option value="${elem.id}">${elem.name}</option>`);
   }
 
   /**
@@ -44,8 +40,9 @@ class CreateTransactionForm extends AsyncForm {
   onSubmit(data) {
     Transaction.create(data,(err, response)=> {
       if (response.success === true) {
-        document.activeElement.closest('.modal').querySelector('form').reset()
-        new Modal(document.activeElement.closest('.modal')).close()
+        this.element.reset()
+        App.getModal("newIncome").close()
+        App.getModal("newExpense").close()
         App.update() 
       }
     })

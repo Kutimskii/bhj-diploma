@@ -21,13 +21,8 @@ class Sidebar {
     const toggle = document.querySelector('.sidebar-toggle');
     const sidebar = document.querySelector('.sidebar-mini')
     toggle.onclick = () => {
-      if (sidebar.classList.contains('sidebar-open')) {
-        sidebar.classList.remove('sidebar-open');
-        sidebar.classList.remove('sidebar-collapse');
-      } else {
-        sidebar.classList.add('sidebar-open');
-        sidebar.classList.add('sidebar-collapse');
-      }
+        sidebar.classList.toggle('sidebar-open');
+        sidebar.classList.toggle('sidebar-collapse');
     }
   }
 

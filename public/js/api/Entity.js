@@ -17,9 +17,7 @@ class Entity {
       url: this.URL,
       data,
       method: 'GET',
-      callback: ( err, response ) => {
-        callback(err, response);
-      }
+      callback: callback,
     });
   }
   /**
@@ -27,14 +25,12 @@ class Entity {
    * на сервер. (в зависимости от того,
    * что наследуется от Entity)
    * */
-  static create(data, callback) {
+  static create(data,callback) {
     createRequest({
       url: this.URL,
-      data,
+      data: data,
       method: 'PUT',
-      callback: (err, response) => {
-        callback(err, response);
-      }
+      callback: callback,
     });
   }
 
@@ -42,16 +38,14 @@ class Entity {
    * Удаляет информацию о счёте или доходе/расходе
    * (в зависимости от того, что наследуется от Entity)
    * */
-  static remove(data, callback ) {
+  static remove(data,callback) {
     createRequest({
       url: this.URL,
       data: {
         id:data
       },
       method: 'DELETE',
-      callback: (err, response) => {
-        callback(err, response);
-      }
+      callback: callback,
     });
   }
 }

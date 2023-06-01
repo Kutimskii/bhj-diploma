@@ -11,11 +11,11 @@ class TransactionsPage {
    * через registerEvents()
    * */
   constructor( element ) {
-    if(element) {
+    if(!element) {
+      throw new Error('Ошибка');
+    } else {
       this.element = element;
       this.registerEvents();
-    } else {
-      alert('Ошибка');
     }
   }
 
@@ -88,18 +88,16 @@ class TransactionsPage {
   render(options){
     if (options === undefined) {
       return
-    } else {
-      this.lastOptions = options;
-      Account.get(options.account_id,(err, response)=> {
-        if (response.success === true) {
-          this.renderTitle(response.data.name);
-          Transaction.list(response.data, (err,response) => {
-            this.renderTransactions(response.data)
-          })
-        }
-      })
-
-    }
+    } 
+    this.lastOptions = options;
+    Account.get(options.account_id,(err, response)=> {
+      this.renderTitle(response.data.name);
+      if (response.success === true) {
+        Transaction.list(response.data, (err,response) => {
+          this.renderTransactions(response.data)
+       })
+      }
+    })
   }
 
   /**

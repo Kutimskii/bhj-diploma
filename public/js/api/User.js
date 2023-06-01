@@ -27,11 +27,9 @@ class User {
    * из локального хранилища
    * */
   static current() {
-   if (localStorage.getItem("user")) {
+
     return JSON.parse(localStorage.getItem("user"));
-    } else {
-    return undefined;
-    }
+
   }
 
   /**
@@ -43,11 +41,12 @@ class User {
       url: this.URL + '/current',
       method: 'GET',
       callback: (err, response) => {
-        if (response.success === false){
-          return response
-        } else {
-          this.setCurrent(response.user);
+          if (response.success === false){
+            return response
+          } else {
+            this.setCurrent(response.user);
         }
+        callback (err, response)
       }
     })
   }

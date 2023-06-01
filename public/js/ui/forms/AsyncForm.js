@@ -16,11 +16,11 @@ class AsyncForm {
 
   constructor(element) {
 
-    if(element) {
+    if(!element) {
+      throw new Error('Ошибка');
+    } else {
       this.element = element;
       this.registerEvents();
-    } else {
-      alert('Ошибка');
     }
   }
 
@@ -43,15 +43,8 @@ class AsyncForm {
    * }
    * */
   getData() {
-    const formData = new FormData(this.element)
-    const entries = formData.entries();
-    let dataFromForm ={}
-    for (let item of entries) {
-      const key = item[ 0 ],
-      value = item[ 1 ];
-      dataFromForm[key] = value;
-    }
-    return dataFromForm;
+    const formData = new FormData(this.element);
+    return Object.fromEntries(formData.entries());
   }
 
   onSubmit(options){

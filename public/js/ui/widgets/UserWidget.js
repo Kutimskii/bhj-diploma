@@ -12,12 +12,11 @@ class UserWidget {
    * необходимо выкинуть ошибку.
    * */
   constructor(element){
-    // if(element) {
-    //   this.element = element;
-    //   this.registerEvents();
-    // } else {
-    //   alert('Ошибка');
-    // }
+    if(!element) {
+      throw new Error('Ошибка');
+    } else {
+      this.element = element;
+    }
   }
 
   /**

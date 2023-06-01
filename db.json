@@ -116,6 +116,12 @@
       "email": "kostya@123",
       "password": "123",
       "id": "pv1yncskli4abxws"
+    },
+    {
+      "name": "Катя",
+      "email": "katya@123",
+      "password": "123",
+      "id": "pv1ynf5clic3ncau"
     }
   ],
   "accounts": [
@@ -140,9 +146,24 @@
       "id": "pv1yni7gli4ab380"
     },
     {
-      "name": "qqq",
+      "name": "1111",
       "user_id": "pv1yncskli4abxws",
-      "id": "pv1yn9usli4ac2tk"
+      "id": "pv1ynic0lic085dl"
+    },
+    {
+      "name": "dfgdfg",
+      "user_id": "pv1yncskli4abxws",
+      "id": "pv1yneywlic0qqxj"
+    },
+    {
+      "name": "dfgdfg333",
+      "user_id": "pv1yncskli4abxws",
+      "id": "pv1yn9rolic0t005"
+    },
+    {
+      "name": "8888",
+      "user_id": "pv1yncskli4abxws",
+      "id": "pv1yndbslicszfub"
     }
   ],
   "transactions": [
@@ -289,6 +310,24 @@
       "account_id": "pv1yni7gli4ab380",
       "user_id": "pv1yn6m0lhuuovn2",
       "created_at": "2023-05-26T08:11:51.164Z"
+    },
+    {
+      "id": "pv1yn1nglicpq8sb",
+      "type": "expense",
+      "name": "5555",
+      "sum": 88888,
+      "account_id": "pv1yneywlic0qqxj",
+      "user_id": "pv1yncskli4abxws",
+      "created_at": "2023-06-01T05:45:37.019Z"
+    },
+    {
+      "id": "pv1ynayslicszmyz",
+      "type": "expense",
+      "name": "7",
+      "sum": 88888,
+      "account_id": "pv1yndbslicszfub",
+      "user_id": "pv1yncskli4abxws",
+      "created_at": "2023-06-01T07:16:54.154Z"
     }
   ]
 }
